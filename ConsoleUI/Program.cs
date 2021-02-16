@@ -12,14 +12,7 @@ namespace ConsoleUI
         {
 
             RentalManager rentalManager = new RentalManager(new EfRentalDal());
-            rentalManager.Add(new Rental
-            {
-                CarId = 3,
-                CustomerId = 2,
-                Id = 7,
-                RentDate = DateTime.Now
-
-            });
+            rentalManager.Add(new Rental { CarId = 2, CustomerId = 1, Id = 3, RentDate = DateTime.Now });
 
             foreach (var rentals in rentalManager.GetAll().Data)
             {

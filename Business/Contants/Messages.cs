@@ -32,7 +32,7 @@ namespace Business.Contants
         public static string UserDeleted = "Kullanıcı silindi.";
         public static string UserUpdated = "Kullanıcı güncellendi.";
         public static string UserListed = "Kullanıcılar listelendi.";
+        public static string ReturnDateNull = "Dönüş tarihi belirsiz.";
 
-        public static string FailedRentalAddOrUpdate { get; internal set; }
     }
 }

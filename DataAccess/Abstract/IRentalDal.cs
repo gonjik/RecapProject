@@ -7,6 +7,5 @@ namespace DataAccess.Abstract
 {
     public interface IRentalDal : IEntityRepository<Rental>
     {
-        object GetCarsDetails(Func<object, bool> p);
     }
 }

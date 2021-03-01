@@ -13,9 +13,7 @@ namespace Business.ValidationRules.FluentValidation
         {
             RuleFor(u => u.FirstName).NotEmpty();
             RuleFor(u => u.LastName).NotEmpty();
-            RuleFor(u => u.Password).MinimumLength(8);
-            RuleFor(u => u.Password).Matches(@"[a-z]+").WithMessage("Şifreniz en az bir harf içermelidir.");
-            RuleFor(u => u.Password).Matches(@"[0-9]+").WithMessage("Şifreniz en az bir sayı içermelidir.");
+
         }
 
     }

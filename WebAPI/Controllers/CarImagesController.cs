@@ -1,5 +1,4 @@
 ﻿using Business.Abstract;
-using Core.Entities.Concrete;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,20 +11,19 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class CarImagesController : ControllerBase
     {
-        IUserService _userService;
+        ICarImageService _carImageService;
 
-        public UsersController(IUserService userService)
+        public CarImagesController(ICarImageService carImageService)
         {
-            _userService = userService;
+            _carImageService = carImageService;
         }
 
         [HttpGet("GetAll")]
-
         public IActionResult GetAll()
         {
-            var result = _userService.GetAll();
+            var result = _carImageService.GetAll();
             if (result.Success)
             {
                 return Ok(result);
@@ -33,10 +31,21 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpPost("Add")]
-        public IActionResult Add(User user)
+        [HttpPost("add")]
+        public IActionResult Add([FromForm(Name = ("Image"))] IFormFile file, [FromForm] CarImage carImage)
         {
-            var result = _userService.Add(user);
+            var result = _carImageService.Add(carImage);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpDelete("Delete")]
+        public IActionResult Delete(CarImage carImage)
+        {
+            var result = _carImageService.Delete(carImage);
             if (result.Success)
             {
                 return Ok(result);
@@ -46,21 +55,9 @@ namespace WebAPI.Controllers
 
         [HttpPut("Update")]
 
-        public IActionResult Update(User user)
+        public IActionResult Update(CarImage carImage)
         {
-            var result = _userService.Update(user);
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
-
-        [HttpDelete("Delete")]
-
-        public IActionResult Delete(User user)
-        {
-            var result = _userService.Delete(user);
+            var result = _carImageService.Update(carImage);
             if (result.Success)
             {
                 return Ok(result);

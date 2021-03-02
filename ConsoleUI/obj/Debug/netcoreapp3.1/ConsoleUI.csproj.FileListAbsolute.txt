@@ -80,3 +80,4 @@ C:\Users\derma\source\repos\RecapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Castl
 C:\Users\derma\source\repos\RecapProject\ConsoleUI\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Users\derma\source\repos\RecapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
 C:\Users\derma\source\repos\RecapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\derma\source\repos\RecapProject\ConsoleUI\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll

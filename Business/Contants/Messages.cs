@@ -35,11 +35,6 @@ namespace Business.Contants
         public static string UserUpdated = "Kullanıcı güncellendi.";
         public static string UserListed = "Kullanıcılar listelendi.";
         public static string ReturnDateNull = "Dönüş tarihi belirsiz.";
-        public static string CarImageAdded = "Araç resmi eklendi.";
-        public static string CarImageDeleted = "Araç resmi silindi.";
-        public static string CarImageListed = "Araç resimleri listelendi.";
-        public static string CarImageUpdated = "Araç resmi güncellendi.";
-        public static string ImageLimitExceded = "Resim limiti aşıldı.";
         public static string UserNotFound = "Kullanıcı bulunamadı";
         public static string PasswordError = "Şifre hatalı";
         public static string SuccessfulLogin = "Sisteme giriş başarılı";
@@ -49,5 +44,7 @@ namespace Business.Contants
 
         public static string AuthorizationDenied = "Yetkiniz yok";
         public static string ProductNameAlreadyExists = "Ürün ismi zaten mevcut";
+        public static string CarNotFound = "Araç bulunamadı";
+        internal static string CheckImageLimitExceeded;
     }
 }

@@ -46,7 +46,15 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.DailyPrice >= 0));
         }
-
+        public IDataResult<Car> GetById(int carId)
+        {
+            var result = _carDal.Get(c => c.Id == carId);
+            if (result != null)
+            {
+                return new SuccessDataResult<Car>(result);
+            }
+            return new ErrorDataResult<Car>(Messages.CarNotFound);
+        }
         public IDataResult<List<CarDetailDto>> GetCarsDetails()
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarsDetails());

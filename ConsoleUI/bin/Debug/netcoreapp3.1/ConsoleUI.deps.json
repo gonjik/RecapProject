@@ -42,7 +42,7 @@
       "Autofac.Extras.DynamicProxy/6.0.0": {
         "dependencies": {
           "Autofac": "6.1.0",
-          "Castle.Core": "4.4.0"
+          "Castle.Core": "4.4.1"
         },
         "runtime": {
           "lib/netstandard2.1/Autofac.Extras.DynamicProxy.dll": {
@@ -51,7 +51,7 @@
           }
         }
       },
-      "Castle.Core/4.4.0": {
+      "Castle.Core/4.4.1": {
         "dependencies": {
           "System.Collections.Specialized": "4.3.0",
           "System.ComponentModel": "4.3.0",
@@ -66,7 +66,7 @@
         "runtime": {
           "lib/netstandard1.5/Castle.Core.dll": {
             "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.4.0.0"
+            "fileVersion": "4.4.1.0"
           }
         }
       },
@@ -99,7 +99,7 @@
       },
       "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.3",
           "System.Text.Encodings.Web": "4.5.0"
         },
         "runtime": {
@@ -109,14 +109,15 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "Microsoft.AspNetCore.Http.Features/5.0.3": {
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "5.0.0"
+          "Microsoft.Extensions.Primitives": "5.0.0",
+          "System.IO.Pipelines": "5.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
-            "assemblyVersion": "2.2.0.0",
-            "fileVersion": "2.2.0.18316"
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.321.7303"
           }
         }
       },
@@ -790,6 +791,14 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.IO.Pipelines/5.0.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {
+            "assemblyVersion": "5.0.0.1",
+            "fileVersion": "5.0.120.57516"
+          }
+        }
+      },
       "System.Linq/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -1238,7 +1247,9 @@
           "Entities": "1.0.0",
           "FluentValidation": "9.5.1",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
-          "Microsoft.Extensions.DependencyInjection": "5.0.1"
+          "Microsoft.AspNetCore.Http.Features": "5.0.3",
+          "Microsoft.Extensions.DependencyInjection": "5.0.1",
+          "System.IdentityModel.Tokens.Jwt": "6.8.0"
         },
         "runtime": {
           "Business.dll": {}
@@ -1249,7 +1260,9 @@
           "Autofac": "6.1.0",
           "Autofac.Extensions.DependencyInjection": "7.1.0",
           "Autofac.Extras.DynamicProxy": "6.0.0",
+          "Castle.Core": "4.4.1",
           "FluentValidation": "9.5.1",
+          "Microsoft.AspNetCore.Http.Features": "5.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.11",
           "Microsoft.Extensions.Configuration": "5.0.0",
           "Microsoft.IdentityModel.Tokens": "6.8.0",
@@ -1306,12 +1319,12 @@
       "path": "autofac.extras.dynamicproxy/6.0.0",
       "hashPath": "autofac.extras.dynamicproxy.6.0.0.nupkg.sha512"
     },
-    "Castle.Core/4.4.0": {
+    "Castle.Core/4.4.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-b5rRL5zeaau1y/5hIbI+6mGw3cwun16YjkHZnV9RRT5UyUIFsgLmNXJ0YnIN9p8Hw7K7AbG1q1UclQVU3DinAQ==",
-      "path": "castle.core/4.4.0",
-      "hashPath": "castle.core.4.4.0.nupkg.sha512"
+      "sha512": "sha512-zanbjWC0Y05gbx4eGXkzVycOQqVOFVeCjVsDSyuao9P4mtN1w3WxxTo193NGC7j3o2u3AJRswaoC6hEbnGACnQ==",
+      "path": "castle.core/4.4.1",
+      "hashPath": "castle.core.4.4.1.nupkg.sha512"
     },
     "EntityFramework/6.4.4": {
       "type": "package",
@@ -1334,12 +1347,12 @@
       "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
       "hashPath": "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+    "Microsoft.AspNetCore.Http.Features/5.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
-      "path": "microsoft.aspnetcore.http.features/2.2.0",
-      "hashPath": "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512"
+      "sha512": "sha512-tFDyMSNGEp20NsCZINAbfyOn/21kpPnZoIADsca4ibdzCSfLnZaIxUu5d6o4dy/bBAE1vbdIxSB5e3FJrluCyA==",
+      "path": "microsoft.aspnetcore.http.features/5.0.3",
+      "hashPath": "microsoft.aspnetcore.http.features.5.0.3.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
@@ -1767,6 +1780,13 @@
       "sha512": "sha512-6QOb2XFLch7bEc4lIcJH49nJN2HV+OC3fHDgsLVsBVBk3Y4hFAnOBGzJ2lUu7CyDDFo9IBWkSsnbkT6IBwwiMw==",
       "path": "system.io.filesystem.primitives/4.3.0",
       "hashPath": "system.io.filesystem.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.IO.Pipelines/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qEePWsaq9LoEEIqhbGe6D5J8c9IqQOUuTzzV6wn1POlfdLkJliZY3OlB0j0f17uMWlqZYjH7txj+2YbyrIA8Yg==",
+      "path": "system.io.pipelines/5.0.1",
+      "hashPath": "system.io.pipelines.5.0.1.nupkg.sha512"
     },
     "System.Linq/4.3.0": {
       "type": "package",
